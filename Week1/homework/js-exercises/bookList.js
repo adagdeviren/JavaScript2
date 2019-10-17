@@ -5,23 +5,20 @@ const books = [
         title: 'The Design of Everyday Things',
         author: 'Don Norman',
         alreadyRead: false,
+        cover: "the-design-of-everyday-things.jpeg"
     },
     {
         title: 'The Most Human Human',
         author: 'Brian Christian',
         alreadyRead: true,
+        cover: "the-most-human-human.jpeg"
     },
     {
         title: 'The Great Gatsby',
         author: 'F. Scott Fitzgerald',
         alreadyRead: false,
+        cover: "the-great-gatsby.jpeg"
     }
-];
-// image locations
-const bookCovers = [
-    'the-design-of-everyday-things.jpeg',
-    'the-most-human-human.jpeg',
-    'the-great-gatsby.jpeg'
 ];
 
 const total = books.length;
@@ -61,7 +58,7 @@ for (let i = 0; i < total; i++) {
 
     //Add an <img> to each book that links to a URL of the book cover.
     const bookImage = document.createElement('img');
-    bookImage.src = bookCovers[i];
+    bookImage.src = books[i].cover;
     document.getElementById([i]).appendChild(bookImage);
 
     const color = checkedTheBook(books[i]);
